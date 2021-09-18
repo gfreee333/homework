@@ -1,12 +1,12 @@
-package main.java;
+package main.java.Points;
 public final class Point {
     private double X;
     private double Y;
     private double Z;
     public Point(double x, double y, double z) {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        X = x;
+        Y = y;
+        Z = z;
     }
     public Point() {
 
@@ -16,31 +16,35 @@ public final class Point {
         System.out.print(X);
         System.out.print(Y);
         System.out.println(Z);
-
     }
-
     public void sum(Point point, Point point2, Point point3) {
         point3.X = point2.X + point.X;
         point3.Y = point2.Y + point.Y;
         point3.Z = point2.Z + point.Z;
     }
 
-    public static void subtract(Point point, Point point2, Point point3) {
+    public void subtract(Point point, Point point2, Point point3) {
         point3.X = point.X - point2.X;
         point3.Y = point.Y - point2.Y;
         point3.Z = point.Z - point2.Z;
     }
 
-    public static void multiply(Point point, Point point2, Point point3) {
+    public void multiply(Point point, Point point2, Point point3) {
         point3.X = point2.X * point.X;
         point3.Y = point2.Y * point.Y;
         point3.Z = point2.Z * point.Z;
     }
 
-    public static void divide(Point point, Point point2, Point point3) {
+    public void divide(Point point, Point point2, Point point3) {
         point3.X = point.X / point2.X;
         point3.Y = point.Y / point2.Y;
         point3.Z = point.Z / point2.Z;
+    }
+    public void enlarge(Point point, double x)
+    {
+        point.X = point.X * x;
+        point.Y = point.Y*x;
+        point.Z = point.Z*x;
     }
 
     public static void main (String [] args)
@@ -58,5 +62,7 @@ public final class Point {
         point3.print();
         point3.subtract(point,point2,point3);
         point3.print();
+        point.enlarge(point,100);
+        point.print();
     }
 }
