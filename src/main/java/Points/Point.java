@@ -16,28 +16,28 @@ public final class Point {
         System.out.print(Y);
         System.out.println(Z);
     }
-    public void sum(Point point, Point point2, Point point3) {
+    public static void sum(Point point, Point point2, Point point3) {
         point3.X = point2.X + point.X;
         point3.Y = point2.Y + point.Y;
         point3.Z = point2.Z + point.Z;
     }
-    public  void  subtract(Point point, Point point2, Point point3) {
+    public static void  subtract(Point point, Point point2, Point point3) {
         point3.X = point.X - point2.X;
         point3.Y = point.Y - point2.Y;
         point3.Z = point.Z - point2.Z;
     }
 
-    public  void  multiply(Point point, Point point2, Point point3) {
+    public static void  multiply(Point point, Point point2, Point point3) {
         point3.X = point2.X * point.X;
         point3.Y = point2.Y * point.Y;
         point3.Z = point2.Z * point.Z;
     }
-    public  void divide(Point point, Point point2, Point point3) {
+    public static void divide(Point point, Point point2, Point point3) {
         point3.X = point.X / point2.X;
         point3.Y = point.Y / point2.Y;
         point3.Z = point.Z / point2.Z;
     }
-    public  void enlarge(Point point, double x)
+    public static void enlarge(Point point, double x)
     {
         point.X = point.X * x;
         point.Y = point.Y*x;
