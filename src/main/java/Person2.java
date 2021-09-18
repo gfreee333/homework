@@ -1,7 +1,5 @@
 package main.java;
 
-import test.java.Person;
-
 public class Person2 {
    private String firstname;
    private String lastname;
