@@ -9,7 +9,6 @@ public final class Point {
         Z = z;
     }
     public  Point() {
-
     }
     public void print()
     {
@@ -17,36 +16,33 @@ public final class Point {
         System.out.print(Y);
         System.out.println(Z);
     }
-    public static void sum(Point point, Point point2, Point point3) {
+    public void sum(Point point, Point point2, Point point3) {
         point3.X = point2.X + point.X;
         point3.Y = point2.Y + point.Y;
         point3.Z = point2.Z + point.Z;
     }
-
-    public static void  subtract(Point point, Point point2, Point point3) {
+    public  void  subtract(Point point, Point point2, Point point3) {
         point3.X = point.X - point2.X;
         point3.Y = point.Y - point2.Y;
         point3.Z = point.Z - point2.Z;
     }
 
-    public static void  multiply(Point point, Point point2, Point point3) {
+    public  void  multiply(Point point, Point point2, Point point3) {
         point3.X = point2.X * point.X;
         point3.Y = point2.Y * point.Y;
         point3.Z = point2.Z * point.Z;
     }
-
-    public static void divide(Point point, Point point2, Point point3) {
+    public  void divide(Point point, Point point2, Point point3) {
         point3.X = point.X / point2.X;
         point3.Y = point.Y / point2.Y;
         point3.Z = point.Z / point2.Z;
     }
-    public static void enlarge(Point point, double x)
+    public  void enlarge(Point point, double x)
     {
         point.X = point.X * x;
         point.Y = point.Y*x;
         point.Z = point.Z*x;
     }
-
     public static void main (String [] args)
     {
         Point point = new Point(1.0 ,2.0 ,3.0 );
