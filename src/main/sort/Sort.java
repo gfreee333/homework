@@ -52,25 +52,7 @@ public class Sort {
         array[index2] = tmp;
     }
 
-    private static String arrayToString(int[] array) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (int i = 0; i < array.length; i++) {
-            if (i > 0) {
-                sb.append(", ");
-            }
-            sb.append(array[i]);
-        }
-        sb.append("]");
-        return sb.toString();
-    }
 
-    private static void printSortStep(int[] arr, int from, int to, int partitionIndex) {
-        System.out.print(arrayToString(arr));
-        System.out.print("\npartition at index: " + partitionIndex);
-        System.out.print(", left: " + arrayToString(Arrays.copyOfRange(arr, from, partitionIndex)));
-        System.out.println(", right: " + arrayToString(Arrays.copyOfRange(arr, partitionIndex, to + 1)) + "\n");
-    }
 
     private static void bubbleSort(int[] arr) {
         boolean sorted = false;
