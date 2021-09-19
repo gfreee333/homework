@@ -1,4 +1,4 @@
-package main.java;
+package main.sort;
 
 public class Main {
     public static void main (String[] args)
