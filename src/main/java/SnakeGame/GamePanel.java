@@ -6,11 +6,11 @@ import java.util.Random;
 
 public class GamePanel extends JPanel implements ActionListener{
 
-    static final int SCREEN_WIDTH = 1300;
-    static final int SCREEN_HEIGHT = 750;
+    static final int SCREEN_WIDTH = 700;
+    static final int SCREEN_HEIGHT = 700;
     static final int UNIT_SIZE = 50;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/(UNIT_SIZE*UNIT_SIZE);
-    static final int DELAY = 175;
+    static final int DELAY = 250;
     final int x[] = new int[GAME_UNITS];
     final int y[] = new int[GAME_UNITS];
     int bodyParts = 6;
@@ -43,12 +43,6 @@ public class GamePanel extends JPanel implements ActionListener{
     public void draw(Graphics g) {
 
         if(running) {
-			/*
-			for(int i=0;i<SCREEN_HEIGHT/UNIT_SIZE;i++) {
-				g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
-				g.drawLine(0, i*UNIT_SIZE, SCREEN_WIDTH, i*UNIT_SIZE);
-			}
-			*/
             g.setColor(Color.red);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 
@@ -59,7 +53,6 @@ public class GamePanel extends JPanel implements ActionListener{
                 }
                 else {
                     g.setColor(new Color(45,180,0));
-                    //g.setColor(new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255)));
                     g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
                 }
             }
@@ -109,7 +102,7 @@ public class GamePanel extends JPanel implements ActionListener{
     public void checkCollisions() {
         //checks if head collides with body
         for(int i = bodyParts;i>0;i--) {
-            if((x[0] == x[i])&& (y[0] == y[i])) {
+            if((x[0] == x[i]) && (y[0] == y[i])) {
                 running = false;
             }
         }
