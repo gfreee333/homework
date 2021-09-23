@@ -1,19 +1,15 @@
 package ru.ssau.tk.groupId.Points.Task;
 
 public class Task25 {
-    public static int[] createSomeArrayFib(int lentgh){
-        int[] array = new int[lentgh];
-        for (int i = 0; i < lentgh ; i++) {
-                if (i <= 2)
-                {
-                    array[i] = 1;
-                }
-                else {
-                    for (int j = 0; j < (lentgh-2); j++) {
-                        array[i] = i - (j+1);
-                    }
-                }
+        public static int[] createSomeArrayFibonacci(int length) {
+            int[] someArray = new int[length];
+            int a = 0, b = 1, next;
+            for (int i = 0; i < length; i++) {
+                next = a + b;
+                a = b;
+                b = next;
+                someArray[i] = next;
+            }
+            return someArray;
         }
-        return array;
     }
-}
