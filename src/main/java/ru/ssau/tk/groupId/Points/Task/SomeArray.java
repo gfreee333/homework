@@ -8,4 +8,19 @@ public class SomeArray {
             }
             return someArray;
         }
+        public static int[] createSomeArrayMultiplesOfThree(int length)
+        {
+            int[] someArray = new int[length];
+            int num = 1;
+            for (int i = 0; i < length; i++) {
+                if (num % 3 == 0) {
+                    num++;
+                }
+                someArray[i] = num;
+                num++;
+            }
+            return someArray;
+        }
 }
+
+

@@ -13,4 +13,12 @@ public class SomeArrayTest {
             assertEquals(array[i], 2 * (lengthArrayTest - i), 0.001);
         }
     }
+
+    @Test
+    public void testCreateSomeArrayNaturalNumber() {
+        int[] array = SomeArray.createSomeArrayMultiplesOfThree(lengthArrayTest);
+        for (int i = 0; i < lengthArrayTest; i++) {
+            assertTrue(array[i] % 3 != 0);
+        }
+    }
 }
