@@ -29,9 +29,20 @@ public class TikTacToe implements ActionListener {
         textfield.setOpaque(true);
         title_panel.setLayout(new BorderLayout());
         title_panel.setBounds(0,0,800,100);
-        title_panel.add(textfield);
-        frame.add(title_panel);
+
+        button_panel.setLayout(new GridLayout(3,3));
+        button_panel.setBackground(new Color(150,150,150));
+    for(int i = 0; i<9; i++ ){
+        buttons[i] = new JButton();
+        button_panel.add(buttons[i]);
+        buttons[i].setFont(new Font("MV Boli", Font.BOLD,120));
+        buttons[i].setFocusable(false);
+        buttons[i].addActionListener(this);
     }
+        title_panel.add(textfield);
+        frame.add(title_panel,BorderLayout.NORTH);
+        frame.add(button_panel);
+        }
 
     @Override
     public void actionPerformed(ActionEvent e) {
