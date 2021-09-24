@@ -50,16 +50,35 @@ public class TikTacToe implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-    }
-
-    public void firstTurn() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e)
-        {
-          e.printStackTrace();
+        for (int i = 0; i < 9; i++) {
+            if (e.getSource() == buttons[i]) {
+                if (player1_turn == true) {
+                    if (buttons[i].getText() == "") {
+                        buttons[i].setForeground(Color.blue);
+                        buttons[i].setText("X");
+                        player1_turn = false;
+                        textfield.setText("O Turn");
+                        check();;
+                    }
+                } else {
+                    if (buttons[i].getText() == "") {
+                        buttons[i].setForeground(Color.red);
+                        buttons[i].setText("O");
+                        player1_turn = true;
+                        textfield.setText("X Turn");
+                        check();
+                        }
+                    }
+                }
+            }
         }
+
+        public void firstTurn() {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             if (random.nextInt(2) == 0) {
                 player1_turn = true;
                 textfield.setText("X turn");
@@ -67,19 +86,18 @@ public class TikTacToe implements ActionListener {
                 player1_turn = false;
                 textfield.setText("O turn");
             }
+        }
+
+        public void check () {
+
+        }
+
+        public void xWins ( int a, int b, int c){
+
+        }
+
+        public void oWins ( int a, int b, int c){
+
+        }
 
     }
-
-    public void check() {
-
-    }
-
-    public void xWins(int a, int b, int c) {
-
-    }
-
-    public void oWins(int a, int b, int c) {
-
-    }
-
-}
