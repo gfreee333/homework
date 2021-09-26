@@ -29,4 +29,12 @@ public class SomeArrayTest {
             assertEquals(array[i-1]-array[i],13,0.01);
         }
     }
+
+    @Test
+    public void testCreateSomeArrayGeometryProgression() {
+        double[] array = SomeArray.createSomeArrayGeometryProgression(lengthArrayTest,1,5);
+            for (int i = 1; i < lengthArrayTest; i++) {
+                assertEquals(array[i] / array[i - 1], 5, 0.001);
+            }
+        }
 }

@@ -30,6 +30,14 @@ public class SomeArray {
             }
             return someArray;
         }
+        public static double[] createSomeArrayGeometryProgression(int length, int firstElement, int factor){
+            double[] someArray = new double[length];
+            someArray[0] = firstElement;
+            for (int i = 1; i < length ; i++) {
+                someArray[i] = someArray[i-1] * factor;
+            }
+            return someArray;
+        }
 }
 
 
