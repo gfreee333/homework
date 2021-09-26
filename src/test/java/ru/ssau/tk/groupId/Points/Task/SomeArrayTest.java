@@ -21,4 +21,12 @@ public class SomeArrayTest {
             assertTrue(array[i] % 3 != 0);
         }
     }
+
+    @Test
+    public void testCreateSomeArrayArithmeticProgression() {
+        double[] array = SomeArray.createSomeArrayArithmeticProgression(lengthArrayTest,10,13);
+        for (int i = lengthArrayTest; i > lengthArrayTest ; i--) {
+            assertEquals(array[i-1]-array[i],13,0.01);
+        }
+    }
 }
