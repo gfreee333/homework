@@ -37,4 +37,14 @@ public class SomeArrayTest {
                 assertEquals(array[i] / array[i - 1], 5, 0.001);
             }
         }
+
+    @Test
+    public void testCreateSomeArrayIntDivisorsValue() {
+        int number = 10;
+        double[] array = SomeArray.createSomeArrayIntDivisorsValue(10);
+        for (double v: array)
+        {
+            assertEquals(number%v, 0,0.001);
+        }
+    }
 }
