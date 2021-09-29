@@ -85,6 +85,16 @@ public class SomeArray {
         }
         return false;
     }
+    public static boolean checkSomeArrayNull(Integer[] someArray)
+    {
+        for(Integer integer : someArray )
+            if(integer==null)
+            {
+                return true;
+            }
+        return false;
+    }
+
 }
 
 

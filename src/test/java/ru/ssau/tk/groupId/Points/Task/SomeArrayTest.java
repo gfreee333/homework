@@ -69,8 +69,13 @@ public class SomeArrayTest {
     @Test
     public void testCreateSomeArraySearch() {
         double[] array = new double[]{1., 3., 4., 5};
-        assertFalse(SomeArray.createSomeArraySearch(array, 9));
+        assertFalse(SomeArray.createSomeArraySearch(array, 200));
         assertTrue(SomeArray.createSomeArraySearch(array, 3));
-        assertFalse(SomeArray.createSomeArraySearch(array, 50));
+    }
+
+    @Test
+    public void testCheckSomeArrayNull() {
+        assertTrue(SomeArray.checkSomeArrayNull(new Integer[]{1,2,3,4,5,null}));
+        assertFalse(SomeArray.checkSomeArrayNull(new Integer[]{1,2,3,4,5}));
     }
 }
