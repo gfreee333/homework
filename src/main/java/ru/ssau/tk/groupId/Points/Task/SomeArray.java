@@ -71,38 +71,49 @@ public class SomeArray {
         }
         return someArray;
     }
-    public static double[] createSomeArrayAlternating(double[] someArray)
-    {
+
+    public static double[] createSomeArrayAlternating(double[] someArray) {
         for (int i = 0; i < someArray.length; i++) {
             someArray[i] = -someArray[i];
         }
         return someArray;
     }
+
     public static boolean createSomeArraySearch(double[] someArray, double number) {
         for (double value : someArray)
-        if(value==number) {
-            return true;
-        }
-        return false;
-    }
-    public static boolean checkSomeArrayNull(Integer[] someArray)
-    {
-        for(Integer integer : someArray )
-            if(integer==null)
-            {
+            if (value == number) {
                 return true;
             }
         return false;
     }
+
+    public static boolean checkSomeArrayNull(Integer[] someArray) {
+        for (Integer integer : someArray)
+            if (integer == null) {
+                return true;
+            }
+        return false;
+    }
+
     public static int checkSomeArrayEvenNumbers(int[] someArray) {
-            int counterEvenNumber = 0;
+        int counterEvenNumber = 0;
         for (int value : someArray) {
-            if(value%2 == 0)
-            {
-                    counterEvenNumber++;
+            if (value % 2 == 0) {
+                counterEvenNumber++;
             }
         }
         return counterEvenNumber;
+    }
+    public static Integer findMaxNumberInSomeArray(Integer[] someArray) {
+        if (someArray.length == 0)
+            return null;
+        Integer max = someArray[0];
+        for (int i = 1; i < someArray.length; i++) {
+            if (someArray[i] > max) {
+                max = someArray[i];
+            }
+        }
+        return max;
     }
 }
 
