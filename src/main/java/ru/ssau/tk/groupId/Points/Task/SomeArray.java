@@ -59,6 +59,18 @@ public class SomeArray {
         someArray[length - 1] = number;
         return someArray;
     }
+
+    public static int[] createSomeArraySymmetric(int length) {
+        int[] someArray = new int[length];
+        for (int i = 1; i < length / 2 + 1; i++) {
+            someArray[i - 1] = i;
+            someArray[length - i] = i;
+        }
+        if (length % 2 == 1) {
+            someArray[length / 2] = someArray[length / 2 - 1] + 1;
+        }
+        return someArray;
+    }
 }
 
 

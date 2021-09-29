@@ -6,6 +6,7 @@ import static org.testng.Assert.*;
 
 public class SomeArrayTest {
     private int lengthArrayTest = 10;
+
     @Test
     public void testCreateSomeArrayDownEven() {
         int[] array = SomeArray.createSomeArrayDownEven(lengthArrayTest);
@@ -24,27 +25,35 @@ public class SomeArrayTest {
 
     @Test
     public void testCreateSomeArrayArithmeticProgression() {
-        double[] array = SomeArray.createSomeArrayArithmeticProgression(lengthArrayTest,10,13);
-        for (int i = lengthArrayTest; i > lengthArrayTest ; i--) {
-            assertEquals(array[i-1]-array[i],13,0.01);
+        double[] array = SomeArray.createSomeArrayArithmeticProgression(lengthArrayTest, 10, 13);
+        for (int i = lengthArrayTest; i > lengthArrayTest; i--) {
+            assertEquals(array[i - 1] - array[i], 13, 0.01);
         }
     }
 
     @Test
     public void testCreateSomeArrayGeometryProgression() {
-        double[] array = SomeArray.createSomeArrayGeometryProgression(lengthArrayTest,1,5);
-            for (int i = 1; i < lengthArrayTest; i++) {
-                assertEquals(array[i] / array[i - 1], 5, 0.001);
-            }
+        double[] array = SomeArray.createSomeArrayGeometryProgression(lengthArrayTest, 1, 5);
+        for (int i = 1; i < lengthArrayTest; i++) {
+            assertEquals(array[i] / array[i - 1], 5, 0.001);
         }
+    }
 
     @Test
     public void testCreateSomeArrayIntDivisorsValue() {
         int number = 10;
         double[] array = SomeArray.createSomeArrayIntDivisorsValue(10);
-        for (double v: array)
-        {
-            assertEquals(number%v, 0,0.001);
+        for (double v : array) {
+            assertEquals(number % v, 0, 0.001);
+        }
+    }
+
+    @Test
+    public void testCreateSomeArraySymmetric() {
+        int[] array = SomeArray.createSomeArraySymmetric(7);
+
+        for (int i = 0; i < array.length; i++) {
+            assertEquals(array[i],array[7 - i - 1], 0.001);
         }
     }
 }
