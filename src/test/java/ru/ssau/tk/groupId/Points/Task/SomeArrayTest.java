@@ -65,4 +65,12 @@ public class SomeArrayTest {
             assertEquals(-v, -v, 0.001);
         }
     }
+
+    @Test
+    public void testCreateSomeArraySearch() {
+        double[] array = new double[]{1., 3., 4., 5};
+        assertFalse(SomeArray.createSomeArraySearch(array, 9));
+        assertTrue(SomeArray.createSomeArraySearch(array, 3));
+        assertFalse(SomeArray.createSomeArraySearch(array, 50));
+    }
 }

@@ -78,6 +78,13 @@ public class SomeArray {
         }
         return someArray;
     }
+    public static boolean createSomeArraySearch(double[] someArray, double number) {
+        for (double value : someArray)
+        if(value==number) {
+            return true;
+        }
+        return false;
+    }
 }
 
 
