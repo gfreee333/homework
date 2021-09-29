@@ -71,6 +71,13 @@ public class SomeArray {
         }
         return someArray;
     }
+    public static double[] createSomeArrayAlternating(double[] someArray)
+    {
+        for (int i = 0; i < someArray.length; i++) {
+            someArray[i] = -someArray[i];
+        }
+        return someArray;
+    }
 }
 
 

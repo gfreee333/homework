@@ -53,7 +53,16 @@ public class SomeArrayTest {
         int[] array = SomeArray.createSomeArraySymmetric(7);
 
         for (int i = 0; i < array.length; i++) {
-            assertEquals(array[i],array[7 - i - 1], 0.001);
+            assertEquals(array[i], array[7 - i - 1], 0.001);
+        }
+    }
+
+    @Test
+    public void testCreateSomeArrayAlternating() {
+        double[] value = {1.0, 2.0, 3.0, 4.0};
+        double[] array = SomeArray.createSomeArrayAlternating(value);
+        for (double v : array) {
+            assertEquals(-v, -v, 0.001);
         }
     }
 }
