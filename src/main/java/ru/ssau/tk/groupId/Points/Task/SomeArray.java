@@ -94,7 +94,16 @@ public class SomeArray {
             }
         return false;
     }
-
+    public static int checkSomeArrayEvenNumbers(int[] someArray) {
+            int counterEvenNumber = 0;
+        for (int value : someArray) {
+            if(value%2 == 0)
+            {
+                    counterEvenNumber++;
+            }
+        }
+        return counterEvenNumber;
+    }
 }
 
 

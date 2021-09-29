@@ -78,4 +78,12 @@ public class SomeArrayTest {
         assertTrue(SomeArray.checkSomeArrayNull(new Integer[]{1,2,3,4,5,null}));
         assertFalse(SomeArray.checkSomeArrayNull(new Integer[]{1,2,3,4,5}));
     }
+
+    @Test
+    public void testCheckSomeArrayEvenNumbers() {
+        int[] array = new int[]{1,2,3,4,5,6,7,8,8};
+       assertEquals(SomeArray.checkSomeArrayEvenNumbers(array),5);
+       int[] array2 = new int[]{1,1,1,1,1,1};
+       assertEquals(SomeArray.checkSomeArrayEvenNumbers(array2),0);
+    }
 }
