@@ -94,4 +94,11 @@ public class SomeArrayTest {
         Integer[] array2 = new Integer[]{};
         assertEquals(SomeArray.findMaxNumberInSomeArray(array2),null);
     }
+
+    @Test
+    public void testSumEvenElementNumber() {
+        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1,2,3,4,5,6}),12,0.001);
+        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1,25,3,25,5,50}),100,0.001);
+        }
+
 }

@@ -115,6 +115,16 @@ public class SomeArray {
         }
         return max;
     }
+    public static Integer sumEvenElementNumber(Integer[] someArray)
+    {
+        int sum = 0;
+        for (int i = 0; i < someArray.length; i++) {
+            if(i%2!=0) {
+                sum += someArray[i];
+            }
+        }
+        return sum;
+    }
 }
 
 
