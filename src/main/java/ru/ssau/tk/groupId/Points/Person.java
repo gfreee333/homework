@@ -4,39 +4,42 @@ public class Person {
     private String FirstName;
     private String LastName;
     private int PassportId;
+
     public Person() {
 
     }
+
     public String getFirstName() {
 
         return FirstName;
     }
+
     public String getLastName() {
 
         return LastName;
     }
-    public int getPassportId()
-    {
+
+    public int getPassportId() {
 
         return PassportId;
     }
-    public void setFirstName(String FirstName)
-    {
 
-        this.FirstName=FirstName;
+    public void setFirstName(String FirstName) {
+
+        this.FirstName = FirstName;
     }
-    public void setLastName(String LastName)
-    {
+
+    public void setLastName(String LastName) {
 
         this.LastName = LastName;
     }
-    public void setPassportId(int PassportId)
-    {
+
+    public void setPassportId(int PassportId) {
 
         this.PassportId = PassportId;
     }
-    public static void main (String[] args)
-    {
+
+    public static void main(String[] args) {
         Person p1 = new Person();
         Person p2 = new Person();
         p1.setFirstName("ivan ");

@@ -47,11 +47,10 @@ public class Sort {
     }
 
     private static void swap(int[] array, int index1, int index2) {
-        int tmp  = array[index1];
+        int tmp = array[index1];
         array[index1] = array[index2];
         array[index2] = tmp;
     }
-
 
 
     private static void bubbleSort(int[] arr) {
@@ -116,7 +115,7 @@ public class Sort {
         System.out.println("\n-Случайный массив-");
 
         for (int i = 0; i < testLen; i++) {
-            arr2[i] = arr1[i] = (int)Math.round(Math.random() * 10000);
+            arr2[i] = arr1[i] = (int) Math.round(Math.random() * 10000);
         }
 
         System.out.println("Быстрая сортировка:");
@@ -145,6 +144,7 @@ public class Sort {
         measureTime(() -> mergeSort(arr2));
 
     }
+
     private static void measureTime(Runnable task) {
         long startTime = System.currentTimeMillis();
         task.run();
