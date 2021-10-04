@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.SnakeGame;
+package ru.ssau.tk.groupId.Points.snakegame;
 
 import javax.swing.*;
 

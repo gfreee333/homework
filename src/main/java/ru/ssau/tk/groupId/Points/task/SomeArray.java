@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.Task;
+package ru.ssau.tk.groupId.Points.task;
 
 public class SomeArray {
     public static int[] createSomeArrayDownEven(int length) {

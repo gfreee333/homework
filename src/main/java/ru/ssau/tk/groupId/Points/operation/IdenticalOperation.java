@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.Operation;
+package ru.ssau.tk.groupId.Points.operation;
 
 public class IdenticalOperation extends Operation {
     @Override

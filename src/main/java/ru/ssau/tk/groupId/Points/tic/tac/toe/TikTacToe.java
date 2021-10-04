@@ -1,13 +1,10 @@
-package ru.ssau.tk.groupId.Points.TicTacToe;
+package ru.ssau.tk.groupId.Points.tic.tac.toe;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.IdentityHashMap;
 import java.util.Random;
-
-import static java.lang.Thread.*;
 
 public class TikTacToe implements ActionListener {
     Random random = new Random();

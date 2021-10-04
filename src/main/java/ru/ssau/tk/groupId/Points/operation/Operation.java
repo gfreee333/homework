@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.Operation;
+package ru.ssau.tk.groupId.Points.operation;
 
 public abstract class Operation {
     public abstract double apply(double value);

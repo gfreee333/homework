@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.Task;
+package ru.ssau.tk.groupId.Points.task;
 
 public class Task26 {
     public static int[] createSomeArraySquareIndex(int length) {

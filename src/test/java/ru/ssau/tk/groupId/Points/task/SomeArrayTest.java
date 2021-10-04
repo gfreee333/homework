@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points.Task;
+package ru.ssau.tk.groupId.Points.task;
 
 import org.testng.annotations.Test;
 
