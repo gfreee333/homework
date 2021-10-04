@@ -1,9 +1,9 @@
 package ru.ssau.tk.groupId.Points;
 
 public class Person {
-    private String FirstName;
-    private String LastName;
-    private int PassportId;
+    private String firstName;
+    private String lastName;
+    private int passportId;
 
     public Person() {
 
@@ -11,32 +11,32 @@ public class Person {
 
     public String getFirstName() {
 
-        return FirstName;
+        return firstName;
     }
 
     public String getLastName() {
 
-        return LastName;
+        return lastName;
     }
 
     public int getPassportId() {
 
-        return PassportId;
+        return passportId;
     }
 
     public void setFirstName(String FirstName) {
 
-        this.FirstName = FirstName;
+        this.firstName = FirstName;
     }
 
     public void setLastName(String LastName) {
 
-        this.LastName = LastName;
+        this.lastName = LastName;
     }
 
     public void setPassportId(int PassportId) {
 
-        this.PassportId = PassportId;
+        this.passportId = PassportId;
     }
 
     public static void main(String[] args) {

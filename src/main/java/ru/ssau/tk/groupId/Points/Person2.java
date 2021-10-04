@@ -5,22 +5,22 @@ public class Person2 {
     private String lastname;
     private int passportId;
 
-    public Person2(String FirstName, String LastName, int PassportId) {   // конструктор с тремя параметрами.
-        firstname = FirstName;
-        lastname = LastName;
-        passportId = PassportId;
+    public Person2(String firstName1, String lastName1, int passportId1) {   // конструктор с тремя параметрами.
+        firstname = firstName1;
+        lastname = lastName1;
+        passportId = passportId1;
     }
 
     public Person2() { // конструктор без параметров.
     }
 
-    public Person2(String FirstName, String LastName) {
-        firstname = FirstName;
-        lastname = LastName;
+    public Person2(String firstName1, String lastName1) {
+        firstname = firstName1;
+        lastname = lastName1;
     }
 
-    public Person2(int PassportId) {
-        passportId = PassportId;
+    public Person2(int passportId1) {
+        passportId = passportId1;
     }
 
     public void print() {
