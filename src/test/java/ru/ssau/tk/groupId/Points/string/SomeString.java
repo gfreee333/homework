@@ -56,7 +56,7 @@ public class SomeString {
         String.getStringBytes(s2);
         System.out.println("task 3.3: ");
         String.comparisonAndConclusion();
-        System.out.println("Task 3.5: ");
+        System.out.println("Task 3.6: ");
         String.studyingCharacterEscaping();
 
     }
