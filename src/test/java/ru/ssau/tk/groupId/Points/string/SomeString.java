@@ -18,6 +18,18 @@ public class SomeString {
             System.out.println(bytes);
         }
     }
+
+    public void studyingCharacterEscaping(){
+        int i = 0;
+        System.out.println("Символ\t№" + ++i);
+        System.out.println("Символ\b№" + ++i);
+        System.out.println("Символ\n№" + ++i);
+        System.out.println("Символ\r№" + ++i);
+        System.out.println("Символ\'№" + ++i);
+        System.out.println("Символ\"№" + ++i);
+        System.out.println("Символ\\№" + ++i);
+    }
+
     public void comparisonAndConclusion()
     {
         String s1 = "hello" + " world";
@@ -44,7 +56,9 @@ public class SomeString {
         String.getStringBytes(s2);
         System.out.println("task 3.3: ");
         String.comparisonAndConclusion();
-        System.out.println("Task 3.4: ");
+        System.out.println("Task 3.5: ");
+        String.studyingCharacterEscaping();
+
     }
 
 }
