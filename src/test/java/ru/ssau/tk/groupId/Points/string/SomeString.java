@@ -25,6 +25,11 @@ public class SomeString {
         System.out.println(s1 == s2);
         System.out.println(s2.equals(s1));
     }
+    public boolean palindromeCheck(String myString)
+    {
+    String palindrome = new StringBuilder(myString).reverse().toString();
+        return myString.equals(palindrome);
+    }
 
 
 
@@ -39,6 +44,7 @@ public class SomeString {
         String.getStringBytes(s2);
         System.out.println("task 3.3: ");
         String.comparisonAndConclusion();
+        System.out.println("Task 3.4: ");
     }
 
 }
