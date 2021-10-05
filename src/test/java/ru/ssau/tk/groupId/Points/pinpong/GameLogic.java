@@ -26,6 +26,8 @@ public class GameLogic extends JPanel implements ActionListener, KeyListener {
         g.setColor(Color.white);
         g.fillRect(770,Bit2Y,10,100);
         g.fillRect(BallX,Bit1Y,20,20);
+        g.setColor(Color.white);
+        g.drawLine(400,0,400,600);
     }
 
     @Override
