@@ -18,6 +18,14 @@ public class SomeString {
             System.out.println(bytes);
         }
     }
+    public void comparisonAndConclusion()
+    {
+        String s1 = "hello" + " world";
+        String s2 = new String("hello world");
+        System.out.println(s1 == s2);
+        System.out.println(s2.equals(s1));
+    }
+
 
 
     public static void main(String[] args) {
@@ -29,6 +37,8 @@ public class SomeString {
         System.out.println("new task 3.2: ");
         String.getStringBytes(s1);
         String.getStringBytes(s2);
+        System.out.println("task 3.3: ");
+        String.comparisonAndConclusion();
     }
 
 }
