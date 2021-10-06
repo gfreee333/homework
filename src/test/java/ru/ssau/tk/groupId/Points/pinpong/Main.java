@@ -11,6 +11,7 @@ public class Main {
         JFrame window = new JFrame("pong");
         window.setSize(800,500);
         window.setDefaultCloseOperation(window.EXIT_ON_CLOSE);
+        window.setResizable(false);
         window.setVisible(true);
         window.setLocation(200,100);
         window.add(game);

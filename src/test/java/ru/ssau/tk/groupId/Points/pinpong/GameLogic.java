@@ -11,8 +11,8 @@ public class GameLogic extends JPanel implements ActionListener, KeyListener {
 
     private final int Bit1Y = 160;
     private final int Bit2Y = 160;
-    private final int BallX = 350;
-    private  final int BallY = 150;
+    private final int BallX = 390;
+    private  final int BallY = 190;
     GameLogic() {
         addKeyListener(this);
     }
@@ -25,7 +25,7 @@ public class GameLogic extends JPanel implements ActionListener, KeyListener {
         g.fillRect(0,Bit1Y,10,100);
         g.setColor(Color.white);
         g.fillRect(770,Bit2Y,10,100);
-        g.fillRect(BallX,Bit1Y,20,20);
+        g.fillRect(BallX,BallY,20,20);
         g.setColor(Color.white);
         g.drawLine(400,0,400,600);
     }
