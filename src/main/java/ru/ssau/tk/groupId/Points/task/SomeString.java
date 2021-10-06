@@ -8,16 +8,15 @@ public class SomeString {
             System.out.println(string.charAt(i));
         }
     }
-    public void getStringBytes(String myString)
-    {
+
+    public void getStringBytes(String myString) {
         byte[] stringBytes = myString.getBytes();
-        for (int bytes : stringBytes)
-        {
+        for (int bytes : stringBytes) {
             System.out.println(bytes);
         }
     }
 
-    public void studyingCharacterEscaping(){
+    public void studyingCharacterEscaping() {
         int i = 0;
         System.out.println("Символ\t№" + ++i);
         System.out.println("Символ\b№" + ++i);
@@ -28,46 +27,50 @@ public class SomeString {
         System.out.println("Символ\\№" + ++i);
     }
 
-    public boolean defferInRegister(String s1, String s2)
-    {
-        return s1.equalsIgnoreCase(s2) &&! s1.equals(s2);
+    public boolean defferInRegister(String s1, String s2) {
+        return s1.equalsIgnoreCase(s2) && !s1.equals(s2);
     }
 
 
-    public void comparisonAndConclusion()
-    {
+    public void comparisonAndConclusion() {
         String s1 = "hello" + " world";
         String s2 = new String("hello world");
         System.out.println(s1 == s2);
         System.out.println(s2.equals(s1));
     }
-    public boolean palindromeCheck(String myString)
-    {
-    String palindrome = new StringBuilder(myString).reverse().toString();
+
+    public boolean palindromeCheck(String myString) {
+        String palindrome = new StringBuilder(myString).reverse().toString();
         return myString.equals(palindrome);
     }
 
-public int firstOccurrence(String s1, String s2)
-{
-    return s1.indexOf(s2);
-}
-public int lineOccurrence(String s1, String s2)
-{
-   return s1.indexOf(s2,s1.length()/2);
-}
+    public int firstOccurrence(String s1, String s2) {
+        return s1.indexOf(s2);
+    }
+
+    public int lineOccurrence(String s1, String s2) {
+        return s1.indexOf(s2, s1.length() / 2);
+    }
+
+    public int lastOccurrenceFirstHalf(String s1, String s2)
+    {
+        return s1.lastIndexOf(s2, s1.length()/2);
+    }
+
+
 
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
         String string1 = "hello";
         String string2 = "el";
         SomeString strings = new SomeString();
-        int first = strings.firstOccurrence(string1,string2);
+        int first = strings.firstOccurrence(string1, string2);
         System.out.println(first);
         System.out.println("task 3.5: ");
         String s3 = "HELLO";
         String s4 = "hello";
         SomeString string = new SomeString();
-        boolean res = string.defferInRegister(s3,s4);
+        boolean res = string.defferInRegister(s3, s4);
         System.out.println(res);
 
         System.out.println("task 3.1");
