@@ -23,4 +23,14 @@ public class SomeStringTest {
         assertEquals(myString.firstOccurrence("aaaaaaaaadda","ad"),8);
         assertEquals(myString.firstOccurrence("9991","200"),-1);
     }
+    @Test
+    public void  testLineOccurrence(){
+        SomeString someString = new SomeString();
+        assertEquals(someString.lineOccurrence("11ll11ll","11"),4);
+        assertEquals(someString.lineOccurrence("1111111","22"),-1);
+        assertEquals(someString.lineOccurrence("hellohello","he"),5);
+        assertEquals(someString.lineOccurrence("privettprivett","tt"),12);
+        assertEquals(someString.lineOccurrence("lllllalllllla","la"),11);
+
+    }
 }

@@ -52,6 +52,11 @@ public int firstOccurrence(String s1, String s2)
     i = s1.indexOf(s2);
     return i;
 }
+public int lineOccurrence(String s1, String s2)
+{   int i;
+   i = s1.indexOf(s2,s1.length()/2);
+   return i;
+}
 
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
