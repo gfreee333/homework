@@ -48,14 +48,12 @@ public class SomeString {
     }
 
 public int firstOccurrence(String s1, String s2)
-{   int i;
-    i = s1.indexOf(s2);
-    return i;
+{
+    return s1.indexOf(s2);
 }
 public int lineOccurrence(String s1, String s2)
-{   int i;
-   i = s1.indexOf(s2,s1.length()/2);
-   return i;
+{
+   return s1.indexOf(s2,s1.length()/2);
 }
 
     public static void main(String[] args) {
