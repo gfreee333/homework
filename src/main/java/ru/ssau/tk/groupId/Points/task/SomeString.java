@@ -1,6 +1,4 @@
-package ru.ssau.tk.groupId.Points.string;
-
-import java.nio.charset.StandardCharsets;
+package ru.ssau.tk.groupId.Points.task;
 
 public class SomeString {
 
@@ -30,6 +28,12 @@ public class SomeString {
         System.out.println("Символ\\№" + ++i);
     }
 
+    public boolean defferInRegister(String s1, String s2)
+    {
+        return s1.equalsIgnoreCase(s2) &&! s1.equals(s2);
+    }
+
+
     public void comparisonAndConclusion()
     {
         String s1 = "hello" + " world";
@@ -43,9 +47,26 @@ public class SomeString {
         return myString.equals(palindrome);
     }
 
-
+public int firstOccurrence(String s1, String s2)
+{   int i;
+    i = s1.indexOf(s2);
+    return i;
+}
 
     public static void main(String[] args) {
+        System.out.println("task 3.7: ");
+        String string1 = "hello";
+        String string2 = "el";
+        SomeString strings = new SomeString();
+        int first = strings.firstOccurrence(string1,string2);
+        System.out.println(first);
+        System.out.println("task 3.5: ");
+        String s3 = "HELLO";
+        String s4 = "hello";
+        SomeString string = new SomeString();
+        boolean res = string.defferInRegister(s3,s4);
+        System.out.println(res);
+
         System.out.println("task 3.1");
         String s1 = "HELLO WORLD";
         String s2 = "привет мир";
