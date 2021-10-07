@@ -66,6 +66,18 @@ public class SomeString {
         return count;
     }
 
+    public static int theNumberOfInTheArrayAndIgnoreSymbolSpace(String[] strings, String prefix, String postfix) {
+        int count = 0;
+
+        for (String string : strings) {
+           if(string.trim().startsWith(prefix) & string.trim().endsWith(postfix))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
         String string1 = "hello";

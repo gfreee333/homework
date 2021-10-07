@@ -48,4 +48,10 @@ public class SomeStringTest {
         assertEquals(SomeString.theNumberOfLinesInTheArray(strings,"14","14"),2);
         assertEquals(SomeString.theNumberOfLinesInTheArray(strings,"p","p"),3);
     }
+    @Test
+    public void testTheNumberOfInTheArrayAndIgnoreSymbol() {
+        String[] strings = {"        11000011     ", "         22000041 ", " 2200021 ", " 2200021 "};
+        assertEquals(SomeString.theNumberOfInTheArrayAndIgnoreSymbolSpace(strings, "11", "11"), 1);
+        assertEquals(SomeString.theNumberOfInTheArrayAndIgnoreSymbolSpace(strings, "22", "21"), 2);
+    }
 }
