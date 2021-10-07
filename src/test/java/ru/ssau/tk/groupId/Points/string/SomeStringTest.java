@@ -42,4 +42,10 @@ public class SomeStringTest {
         assertEquals(str.lastOccurrenceFirstHalf("bbbbbabbbbbbabbbbbbbbbbabbbab","ab"),12);
         assertEquals(str.lastOccurrenceFirstHalf("aaaaaaaaab","ab"),-1);
     }
+    @Test
+    public void testTheNumberOfLinesInTheArray() {
+        String[] strings = {"14414", "p2014p", "142014", "30000","44444","papapap","222","p"};
+        assertEquals(SomeString.theNumberOfLinesInTheArray(strings,"14","14"),2);
+        assertEquals(SomeString.theNumberOfLinesInTheArray(strings,"p","p"),3);
+    }
 }
