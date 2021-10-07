@@ -54,4 +54,13 @@ public class SomeStringTest {
         assertEquals(SomeString.theNumberOfInTheArrayAndIgnoreSymbolSpace(strings, "11", "11"), 1);
         assertEquals(SomeString.theNumberOfInTheArrayAndIgnoreSymbolSpace(strings, "22", "21"), 2);
     }
+    @Test
+    public void testReplacingString() {
+        String str1 = "popoopoopopo";
+        String str2 = "oo";
+        String str3 = "00";
+        String strTest = "hellp ";
+        assertEquals(SomeString.replacingString(str1,str2,str3),"pop00p00popo");
+        assertEquals(SomeString.replacingString(str1,str2,strTest),"pophellp phellp popo");
+    }
 }

@@ -77,6 +77,15 @@ public class SomeString {
         }
         return count;
     }
+    public static String replacingString(String str1, String str2, String str3)
+    {
+        String str = new String();
+        if(str1.contains(str2))
+        {
+           str = str1.replaceAll(str2,str3);
+        }
+        return str;
+    }
 
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
