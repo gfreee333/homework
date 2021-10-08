@@ -8,6 +8,12 @@ import static org.testng.Assert.*;
 public class SomeStringTest {
 
     @Test
+    public void testReverseAndReplacingAString() {
+        String str = "helllo";
+        assertEquals(SomeString.reverseAndReplacingAString(str),"0e2l4o");
+    }
+
+    @Test
     public void testPalindromeCheck() {
         SomeString myString = new SomeString();
         assertEquals(myString.palindromeCheck("123"), false);

@@ -117,6 +117,21 @@ public class SomeString {
         return str.join(", ", strings);
     }
 
+
+        public static String reverseAndReplacingAString(String string) {
+            if (string == null) {
+                return null;
+            }
+            StringBuilder builder = new StringBuilder(string);
+            for (int i = 0; i < string.length(); i++) {
+                if (i % 2 == 0) {
+                    builder.replace(i, i + 1, Integer.toString(i));
+                }
+            }
+            return builder.toString();
+        }
+
+
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
         String string1 = "hello";
