@@ -10,7 +10,7 @@ public class SomeStringTest {
     @Test
     public void testReverseAndReplacingAString() {
         String str = "helllo";
-        assertEquals(SomeString.reverseAndReplacingAString(str),"0e2l4o");
+        assertEquals(SomeString.reverseAndReplacingAString(str),"o4l2e0");
     }
 
     @Test

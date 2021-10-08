@@ -128,7 +128,7 @@ public class SomeString {
                     builder.replace(i, i + 1, Integer.toString(i));
                 }
             }
-            return builder.toString();
+            return builder.reverse().toString();
         }
 
 
