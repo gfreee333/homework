@@ -70,37 +70,46 @@ public class SomeString {
         int count = 0;
 
         for (String string : strings) {
-           if(string.trim().startsWith(prefix) & string.trim().endsWith(postfix))
-            {
+            if (string.trim().startsWith(prefix) & string.trim().endsWith(postfix)) {
                 count++;
             }
         }
         return count;
     }
-    public static String replacingString(String str1, String str2, String str3)
-    {
+
+    public static String replacingString(String str1, String str2, String str3) {
         String str = new String();
-        if(str1.contains(str2))
-        {
-           str = str1.replaceAll(str2,str3);
+        if (str1.contains(str2)) {
+            str = str1.replaceAll(str2, str3);
         }
         return str;
     }
-    public static String someStringToOreFrom(String str, int to, int from)
-    {
-        if(to<0)
-        {
+
+    public static String someStringToOreFrom(String str, int to, int from) {
+        if (to < 0) {
             to = 0;
         }
-        if(to==from)
-        {
+        if (to == from) {
             return null;
         }
-        if(from>str.length())
-        {
+        if (from > str.length()) {
             from = str.length();
         }
-        return str.substring(to,from);
+        return str.substring(to, from);
+    }
+
+    public static String[] splittingSubstringString(String str) {
+
+
+        String[] str1 = str.split(" ");
+        for (int i = 0; i < str1.length; i++) {
+            if (str1[i].length() > 0) {
+                if (Character.isLetter(str1[i].charAt(0))) {
+                    str1[i] = str1[i].substring(0, 1).toUpperCase() + str1[i].substring(1);
+                }
+            }
+        }
+        return str1;
     }
 
     public static void main(String[] args) {

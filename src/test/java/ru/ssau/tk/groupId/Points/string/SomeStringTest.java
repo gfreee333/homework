@@ -70,4 +70,9 @@ public class SomeStringTest {
         assertEquals(SomeString.someStringToOreFrom(str,0,0),null);
         assertEquals(SomeString.someStringToOreFrom(str,-1,3),"hel");
     }
+    @Test
+    public void testSplittingSubstringString() {
+        assertEquals(SomeString.splittingSubstringString("hello i am 5 year")[0],"Hello");
+        assertEquals(SomeString.splittingSubstringString("hello im dead")[2],"Dead");
+    }
 }
