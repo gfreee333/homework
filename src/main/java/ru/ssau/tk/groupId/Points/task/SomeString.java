@@ -112,6 +112,11 @@ public class SomeString {
         return str1;
     }
 
+    public static String arrayStringOreString(String[] strings) {
+        String str = new String();
+        return str.join(", ", strings);
+    }
+
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
         String string1 = "hello";
