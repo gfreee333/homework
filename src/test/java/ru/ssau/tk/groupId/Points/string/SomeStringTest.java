@@ -63,4 +63,11 @@ public class SomeStringTest {
         assertEquals(SomeString.replacingString(str1,str2,str3),"pop00p00popo");
         assertEquals(SomeString.replacingString(str1,str2,strTest),"pophellp phellp popo");
     }
+    @Test
+    public void testSomeStringToOreFrom() {
+        String str = "hello,world";
+        assertEquals(SomeString.someStringToOreFrom(str,0,4),"hell");
+        assertEquals(SomeString.someStringToOreFrom(str,0,0),null);
+        assertEquals(SomeString.someStringToOreFrom(str,-1,3),"hel");
+    }
 }

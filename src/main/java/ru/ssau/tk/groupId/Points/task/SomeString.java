@@ -86,6 +86,22 @@ public class SomeString {
         }
         return str;
     }
+    public static String someStringToOreFrom(String str, int to, int from)
+    {
+        if(to<0)
+        {
+            to = 0;
+        }
+        if(to==from)
+        {
+            return null;
+        }
+        if(from>str.length())
+        {
+            from = str.length();
+        }
+        return str.substring(to,from);
+    }
 
     public static void main(String[] args) {
         System.out.println("task 3.7: ");
