@@ -118,21 +118,31 @@ public class SomeString {
     }
 
 
-        public static String reverseAndReplacingAString(String string) {
-            if (string == null) {
-                return null;
-            }
-            StringBuilder builder = new StringBuilder(string);
-            for (int i = 0; i < string.length(); i++) {
-                if (i % 2 == 0) {
-                    builder.replace(i, i + 1, Integer.toString(i));
-                }
-            }
-            return builder.reverse().toString();
+    public static String reverseAndReplacingAString(String string) {
+        if (string == null) {
+            return null;
         }
-
+        StringBuilder builder = new StringBuilder(string);
+        for (int i = 0; i < string.length(); i++) {
+            if (i % 2 == 0) {
+                builder.replace(i, i + 1, Integer.toString(i));
+            }
+        }
+        return builder.reverse().toString();
+    }
+    /*
+    public static String someStringOreZeroOreValue(int value) {
+        StringBuilder string[] = new StringBuilder[value-1]{};
+        for (int i = 0; i < value - 1; i++) {
+            string[i] =
+        }
+        return string;
+    }
+*/
 
     public static void main(String[] args) {
+        System.out.println("Task 3.23: ");
+        System.out.println(java.nio.charset.Charset.defaultCharset());
         System.out.println("task 3.7: ");
         String string1 = "hello";
         String string2 = "el";
