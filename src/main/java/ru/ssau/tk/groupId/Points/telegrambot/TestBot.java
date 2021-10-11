@@ -23,8 +23,12 @@ public class TestBot extends DefaultAbsSender {
         TestBot bot = new TestBot(new DefaultBotOptions());
         try {
             bot.execute(SendMessage.builder().chatId("1082432833").text("hello, world <3").build());
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
         }
-        catch (TelegramApiException e){
+        try {
+            bot.execute(SendMessage.builder().chatId("1082432833").text("Вот так вот: В данном тестовом боте я попробую реализвать несколько достаточно интересных функцийю ").build());
+        } catch (TelegramApiException e) {
             e.printStackTrace();
         }
     }
