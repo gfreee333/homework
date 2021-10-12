@@ -12,5 +12,19 @@ public class LearnException {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        File file1 = new File("hello.txt");
+        try {
+            Scanner scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            System.out.println("File не найден: ");
+        }
+        try {
+            Object obj = null;
+            obj.hashCode();
+        }
+        catch (NullPointerException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
