@@ -101,4 +101,11 @@ public class SomeArrayTest {
         assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1,25,3,25,5,50}),100,0.001);
         }
 
+    @Test
+    public void testCheckNumInSomeArray() {
+        int[] array = new int[]{1,2,3,4,5,6,7,8};
+        int[] array2 = new int[]{4,4,4,4,4,4,4,4};
+                assertTrue(SomeArray.checkNumInSomeArray(array));
+                assertFalse(SomeArray.checkNumInSomeArray(array2));
+    }
 }

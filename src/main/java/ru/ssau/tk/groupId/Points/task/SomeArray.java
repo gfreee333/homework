@@ -126,6 +126,22 @@ public class SomeArray {
         }
         return sum;
     }
+
+    public static boolean checkNumInSomeArray(int[] someArray) {
+        int first = 0;
+        int last = 0;
+        for (int i = 0; i < someArray.length; i += 2) {
+            if (someArray[i] % someArray[0] == 0) {
+                first++;
+            }
+            if (someArray[i] % someArray[someArray.length - 1] == 0) {
+                last++;
+            }
+
+        }
+        return first > last;
+    }
+
 }
 
 
