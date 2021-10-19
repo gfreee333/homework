@@ -108,4 +108,10 @@ public class SomeArrayTest {
                 assertTrue(SomeArray.checkNumInSomeArray(array));
                 assertFalse(SomeArray.checkNumInSomeArray(array2));
     }
+
+    @Test
+    public void testFindMostPopularNumInSomeArray() {
+        assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6}), 2);
+        assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 1}), 1);
+    }
 }

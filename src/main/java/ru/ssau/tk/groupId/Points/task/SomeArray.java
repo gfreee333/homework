@@ -141,6 +141,22 @@ public class SomeArray {
         }
         return first > last;
     }
+    public static int findMostPopularNumInSomeArray(int[] someArray) {
+        int count = 0, maxCount = 0, currentNum, maxNum = 0;
+        for (int value : someArray) {
+            currentNum = value;
+            for (int item : someArray) {
+                if (currentNum == item)
+                    count++;
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                maxNum = currentNum;
+            }
+            count = 0;
+        }
+        return maxNum;
+    }
 
 }
 
