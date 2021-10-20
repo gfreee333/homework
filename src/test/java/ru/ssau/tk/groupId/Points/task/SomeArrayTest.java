@@ -114,4 +114,13 @@ public class SomeArrayTest {
         assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6}), 2);
         assertEquals(SomeArray.findMostPopularNumInSomeArray(new int[]{1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 6, 1}), 1);
     }
+
+    @Test
+    public void equalsElementIndexInSomeArray() {
+        var array = new Number[]{1, 2, 3, 4, 5};
+        for (int i = 1; i < 6; i++) {
+            assertEquals(SomeArray.equalsElementIndexInSomeArray(array, i), i - 1, 0.001);
+        }
+        assertEquals(SomeArray.equalsElementIndexInSomeArray(array, 0), -1, 0.001);
+    }
 }

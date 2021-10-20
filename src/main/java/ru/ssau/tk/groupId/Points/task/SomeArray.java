@@ -157,6 +157,14 @@ public class SomeArray {
         }
         return maxNum;
     }
+    static int equalsElementIndexInSomeArray(Number[] array, Number found) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(found)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
 
