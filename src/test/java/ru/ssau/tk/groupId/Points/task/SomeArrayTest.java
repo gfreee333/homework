@@ -123,4 +123,16 @@ public class SomeArrayTest {
         }
         assertEquals(SomeArray.equalsElementIndexInSomeArray(array, 0), -1, 0.001);
     }
+
+    @Test
+    public void testSwapFirstMaxAndMinNumInSomeArray() {
+        int[] array = new int[]{1, 2, 3, 4, 7, 3};
+        SomeArray.swapFirstMaxAndMinNumInSomeArray(array);
+        assertEquals(array[0], 7, 0.001);
+        assertEquals(array[4], 1, 0.001);
+        array = new int[]{1, 5, 3, 4, 5, 4, 3, 2, 0};
+        SomeArray.swapFirstMaxAndMinNumInSomeArray(array);
+        assertEquals(array[1], 0, 0.001);
+        assertEquals(array[8], 5, 0.001);
+    }
 }

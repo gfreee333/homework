@@ -165,6 +165,21 @@ public class SomeArray {
         }
         return -1;
     }
+    public static void swapFirstMaxAndMinNumInSomeArray(int[] someArray) {
+        int maxNumber = someArray[0], minNumber = someArray[0], maxIndex = 0, minIndex = 0;
+        for (int i = 1; i < someArray.length; i++) {
+            if (someArray[i] > maxNumber) {
+                maxNumber = someArray[i];
+                maxIndex = i;
+            }
+            if (someArray[i] < minNumber) {
+                minNumber = someArray[i];
+                minIndex = i;
+            }
+        }
+        someArray[maxIndex] = minNumber;
+        someArray[minIndex] = maxNumber;
+    }
 
 }
 
