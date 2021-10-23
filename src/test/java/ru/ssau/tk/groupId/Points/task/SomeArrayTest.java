@@ -135,4 +135,12 @@ public class SomeArrayTest {
         assertEquals(array[1], 0, 0.001);
         assertEquals(array[8], 5, 0.001);
     }
+
+    @Test
+    public void testBitNoArrayOperation() {
+        int[] array = {122,222};
+        SomeArray.bitNoArrayOperation(array);
+        assertEquals(array[0],-123);
+        assertEquals(array[1],-223);
+    }
 }

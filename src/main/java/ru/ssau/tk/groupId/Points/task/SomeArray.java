@@ -180,6 +180,11 @@ public class SomeArray {
         someArray[maxIndex] = minNumber;
         someArray[minIndex] = maxNumber;
     }
+    public static void bitNoArrayOperation(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
+        }
+    }
 
 }
 
