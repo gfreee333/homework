@@ -141,6 +141,7 @@ public class SomeArray {
         }
         return first > last;
     }
+
     public static int findMostPopularNumInSomeArray(int[] someArray) {
         int count = 0, maxCount = 0, currentNum, maxNum = 0;
         for (int value : someArray) {
@@ -157,6 +158,7 @@ public class SomeArray {
         }
         return maxNum;
     }
+
     static int equalsElementIndexInSomeArray(Number[] array, Number found) {
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(found)) {
@@ -165,6 +167,7 @@ public class SomeArray {
         }
         return -1;
     }
+
     public static void swapFirstMaxAndMinNumInSomeArray(int[] someArray) {
         int maxNumber = someArray[0], minNumber = someArray[0], maxIndex = 0, minIndex = 0;
         for (int i = 1; i < someArray.length; i++) {
@@ -180,11 +183,21 @@ public class SomeArray {
         someArray[maxIndex] = minNumber;
         someArray[minIndex] = maxNumber;
     }
-    public static void bitNoArrayOperation(int[] array){
+
+    public static void bitNoArrayOperation(int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = ~array[i];
         }
     }
+
+    public static int[] createArrayBitNoArrayOperation(int[] array) {
+        int[] arrayNOT = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arrayNOT[i] = ~array[i];
+        }
+        return arrayNOT;
+    }
+
 
 }
 

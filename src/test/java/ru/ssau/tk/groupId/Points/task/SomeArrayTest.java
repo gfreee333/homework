@@ -89,24 +89,24 @@ public class SomeArrayTest {
 
     @Test
     public void testFindMaxNumberInSomeArray() {
-        Integer[] array = new Integer[]{1,2,3,4,5,6};
-        assertEquals(SomeArray.findMaxNumberInSomeArray(array),6,0.001);
+        Integer[] array = new Integer[]{1, 2, 3, 4, 5, 6};
+        assertEquals(SomeArray.findMaxNumberInSomeArray(array), 6, 0.001);
         Integer[] array2 = new Integer[]{};
-        assertEquals(SomeArray.findMaxNumberInSomeArray(array2),null);
+        assertEquals(SomeArray.findMaxNumberInSomeArray(array2), null);
     }
 
     @Test
     public void testSumEvenElementNumber() {
-        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1,2,3,4,5,6}),12,0.001);
-        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1,25,3,25,5,50}),100,0.001);
-        }
+        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1, 2, 3, 4, 5, 6}), 12, 0.001);
+        assertEquals(SomeArray.sumEvenElementNumber(new Integer[]{1, 25, 3, 25, 5, 50}), 100, 0.001);
+    }
 
     @Test
     public void testCheckNumInSomeArray() {
-        int[] array = new int[]{1,2,3,4,5,6,7,8};
-        int[] array2 = new int[]{4,4,4,4,4,4,4,4};
-                assertTrue(SomeArray.checkNumInSomeArray(array));
-                assertFalse(SomeArray.checkNumInSomeArray(array2));
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        int[] array2 = new int[]{4, 4, 4, 4, 4, 4, 4, 4};
+        assertTrue(SomeArray.checkNumInSomeArray(array));
+        assertFalse(SomeArray.checkNumInSomeArray(array2));
     }
 
     @Test
@@ -138,9 +138,16 @@ public class SomeArrayTest {
 
     @Test
     public void testBitNoArrayOperation() {
-        int[] array = {122,222};
+        int[] array = {122, 222};
         SomeArray.bitNoArrayOperation(array);
-        assertEquals(array[0],-123);
-        assertEquals(array[1],-223);
+        assertEquals(array[0], -123);
+        assertEquals(array[1], -223);
+    }
+
+    @Test
+    public void testCreateArrayBitNoArrayOperation() {
+        int[] array = {228, 2999};
+        SomeArray.createArrayBitNoArrayOperation(array);
+        assertEquals(SomeArray.createArrayBitNoArrayOperation(array), new int[]{-229, -3000});
     }
 }
