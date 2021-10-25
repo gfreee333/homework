@@ -1,7 +1,7 @@
 package ru.ssau.tk.groupId.Points.operation;
 
 import org.testng.annotations.Test;
-import ru.ssau.tk.groupId.Points.Task22;
+import ru.ssau.tk.groupId.Points.task.Task22;
 
 import static org.testng.Assert.*;
 

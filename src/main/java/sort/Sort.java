@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points;
+package sort;
 
 import java.util.Arrays;
 

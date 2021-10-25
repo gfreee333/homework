@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points;
+package ru.ssau.tk.groupId.Points.task;
 
 public class Person {
     private String firstName;

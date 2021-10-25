@@ -1,4 +1,4 @@
-package ru.ssau.tk.groupId.Points;
+package ru.ssau.tk.groupId.Points.task;
 
 public class Task22 {
     public int[] SetNumber(int size) {

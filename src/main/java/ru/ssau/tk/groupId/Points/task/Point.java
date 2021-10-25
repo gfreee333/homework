@@ -1,4 +1,4 @@
-package main.java.Points;
+package ru.ssau.tk.groupId.Points.task;
 public  class Point {
     public double X;
     public double Y;

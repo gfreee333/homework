@@ -12,6 +12,7 @@ public class TestBot extends DefaultAbsSender {
     public TestBot(DefaultBotOptions options) {
         super(options);
     }
+String token = new String();
 
     @Override
     public String getBotToken() {
