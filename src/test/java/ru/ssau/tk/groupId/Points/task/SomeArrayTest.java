@@ -150,4 +150,10 @@ public class SomeArrayTest {
         SomeArray.createArrayBitNoArrayOperation(array);
         assertEquals(SomeArray.createArrayBitNoArrayOperation(array), new int[]{-229, -3000});
     }
+
+    @Test
+    public void testPairSumInSomeArray() {
+        int[] array = {0,2,1,2,1,2,1};
+        assertEquals(SomeArray.pairSumInSomeArray(array),new int[]{2,3,3,1});
+    }
 }
