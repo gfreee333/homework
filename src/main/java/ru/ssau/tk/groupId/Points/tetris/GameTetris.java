@@ -5,8 +5,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
-class GameTetris extends JFrame {
-
+class GameTetris extends JFrame implements ActionListener {
+    private JButton button;
     private final String TITLE_OF_PROGRAM = "Tetris";
     private final int BLOCK_SIZE = 25;
     private final int ARC_RADIUS = 6;
@@ -50,11 +50,8 @@ class GameTetris extends JFrame {
             {1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0},
             {0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0}};
 
-    public static void main(String[] args) {
-        new GameTetris().go();
-    }
+    public GameTetris() {
 
-    GameTetris() {
         setTitle(TITLE_OF_PROGRAM);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setBounds(START_LOCATION, START_LOCATION, FIELD_WIDTH * BLOCK_SIZE + FIELD_DX, FIELD_HEIGHT * BLOCK_SIZE + FIELD_DY);
@@ -73,6 +70,13 @@ class GameTetris extends JFrame {
         add(BorderLayout.CENTER, canvas);
         setVisible(true);
         Arrays.fill(mine[FIELD_HEIGHT], 1);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            new GameTetris().go();
+        }
     }
 
     public void go() {
@@ -118,7 +122,7 @@ class GameTetris extends JFrame {
         private int type, size, color;
         private int x = 3, y = 0;
 
-        Figure() {
+        public Figure() {
             type = random.nextInt(SHAPES.length);
             size = SHAPES[type][4][0];
             color = SHAPES[type][4][1];
@@ -128,18 +132,18 @@ class GameTetris extends JFrame {
             createFromShape();
         }
 
-       public void createFromShape() {
+        public void createFromShape() {
             for (int x = 0; x < size; x++)
                 for (int y = 0; y < size; y++)
                     if (shape[y][x] == 1) figure.add(new Block(x + this.x, y + this.y));
         }
 
-       public boolean isTouchGround() {
+        public boolean isTouchGround() {
             for (Block block : figure) if (mine[block.getY() + 1][block.getX()] > 0) return true;
             return false;
         }
 
-       public boolean isCrossGround() {
+        public boolean isCrossGround() {
             for (Block block : figure) if (mine[block.getY()][block.getX()] > 0) return true;
             return false;
         }
@@ -148,7 +152,7 @@ class GameTetris extends JFrame {
             for (Block block : figure) mine[block.getY()][block.getX()] = color;
         }
 
-       public boolean isTouchWall(int direction) {
+        public boolean isTouchWall(int direction) {
             for (Block block : figure) {
                 if (direction == LEFT && (block.getX() == 0 || mine[block.getY()][block.getX() - 1] > 0)) return true;
                 if (direction == RIGHT && (block.getX() == FIELD_WIDTH - 1 || mine[block.getY()][block.getX() + 1] > 0))
@@ -157,7 +161,7 @@ class GameTetris extends JFrame {
             return false;
         }
 
-       public void move(int direction) {
+        public void move(int direction) {
             if (!isTouchWall(direction)) {
                 int dx = direction - 38;
                 for (Block block : figure) block.setX(block.getX() + dx);
@@ -170,11 +174,11 @@ class GameTetris extends JFrame {
             y++;
         }
 
-       public void drop() {
+        public void drop() {
             while (!isTouchGround()) stepDown();
         }
 
-       public boolean isWrongPosition() {
+        public boolean isWrongPosition() {
             for (int x = 0; x < size; x++)
                 for (int y = 0; y < size; y++)
                     if (shape[y][x] == 1) {
@@ -185,7 +189,7 @@ class GameTetris extends JFrame {
             return false;
         }
 
-       public void rotateShape(int direction) {
+        public void rotateShape(int direction) {
             for (int i = 0; i < size / 2; i++)
                 for (int j = i; j < size - 1 - i; j++)
                     if (direction == RIGHT) {
@@ -212,7 +216,7 @@ class GameTetris extends JFrame {
                 rotateShape(LEFT);
         }
 
-       public void paint(Graphics g) {
+        public void paint(Graphics g) {
             for (Block block : figure) block.paint(g, color);
         }
     }
@@ -225,15 +229,15 @@ class GameTetris extends JFrame {
             setY(y);
         }
 
-       public void setX(int x) {
+        public void setX(int x) {
             this.x = x;
         }
 
-       public void setY(int y) {
+        public void setY(int y) {
             this.y = y;
         }
 
-       public int getX() {
+        public int getX() {
             return x;
         }
 
