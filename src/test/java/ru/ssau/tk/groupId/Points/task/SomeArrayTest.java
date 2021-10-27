@@ -154,6 +154,9 @@ public class SomeArrayTest {
     @Test
     public void testPairSumInSomeArray() {
         int[] array = {0,2,1,2,1,2,1};
+        int[] array2 = {2,2,1,2,1,2,1};
         assertEquals(SomeArray.pairSumInSomeArray(array),new int[]{2,3,3,1});
+        assertEquals(SomeArray.pairSumInSomeArray(array2),new int[]{4,3,3,1});
+
     }
 }
