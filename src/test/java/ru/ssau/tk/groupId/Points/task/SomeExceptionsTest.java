@@ -29,4 +29,17 @@ public class SomeExceptionsTest {
             exceptions.charReturn(new String[]{"hello", "hello"}, 2, 1);
         });
     }
+
+    @Test
+    public void testDivisionString() {
+        String str1 = "2";
+        String str2 = "2";
+        assertEquals(exceptions.divisionString(str1,str2),1);
+        assertThrows(NumberFormatException.class,()->{
+            exceptions.divisionString("5","");
+        });
+        assertThrows(NumberFormatException.class,()->{
+            exceptions.divisionString("gegeg","3");
+        });
+    }
 }
