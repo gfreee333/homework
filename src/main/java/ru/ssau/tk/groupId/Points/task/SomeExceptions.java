@@ -1,5 +1,7 @@
 package ru.ssau.tk.groupId.Points.task;
 
+import org.glassfish.grizzly.utils.ArrayUtils;
+
 public  class SomeExceptions {
 
     public char[] StringArray(String[] string, int n) {
@@ -8,5 +10,9 @@ public  class SomeExceptions {
         charA[i] = string[i].charAt(n);
         }
         return charA;
+    }
+    public char charReturn(String[] string, int m, int n)
+    {
+        return string[m].charAt(n);
     }
 }
