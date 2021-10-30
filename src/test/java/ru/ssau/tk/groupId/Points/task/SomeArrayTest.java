@@ -157,6 +157,13 @@ public class SomeArrayTest {
         int[] array2 = {2,2,1,2,1,2,1};
         assertEquals(SomeArray.pairSumInSomeArray(array),new int[]{2,3,3,1});
         assertEquals(SomeArray.pairSumInSomeArray(array2),new int[]{4,3,3,1});
+    }
 
+    @Test
+    public void testMultiInSomeArray() {
+        double[] array = new double[]{1, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
+        assertEquals(SomeArray.multiInSomeArray(array), 2 * 3 * 4 * 5 * 6, 0.0001);
+        array = new double[]{9, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
+        assertEquals(SomeArray.multiInSomeArray(array), 9 * 2 * 3 * 4 * 5 * 6, 0.0001);
     }
 }
