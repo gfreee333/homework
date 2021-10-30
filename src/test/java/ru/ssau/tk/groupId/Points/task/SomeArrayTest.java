@@ -166,4 +166,16 @@ public class SomeArrayTest {
         array = new double[]{9, 2, 3, 4, 0, Double.NEGATIVE_INFINITY, 5, 6, Double.POSITIVE_INFINITY};
         assertEquals(SomeArray.multiInSomeArray(array), 9 * 2 * 3 * 4 * 5 * 6, 0.0001);
     }
+
+    @Test
+    public void testFindEvenNumbers() {
+        int[] arrayOne = {1, 2, 3, 4, 5};
+        assertEquals(SomeArray.findEvenNumbers(arrayOne), new boolean[]{false, true, false, true, false});
+        int[] arrayTwo = {2, 4, 6, 8, 10};
+        assertEquals(SomeArray.findEvenNumbers(arrayTwo), new boolean[]{true, true, true, true, true});
+        int[] arrayThree = {1, 3, 5, 7, 9};
+        assertEquals(SomeArray.findEvenNumbers(arrayThree), new boolean[]{false, false, false, false, false});
+        int[] arrayFour = {-1, 3, -5, 4, 0};
+        assertEquals(SomeArray.findEvenNumbers(arrayFour), new boolean[]{false, false, false, true, true});
+    }
 }

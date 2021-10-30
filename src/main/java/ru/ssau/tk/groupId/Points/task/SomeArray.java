@@ -1,5 +1,7 @@
 package ru.ssau.tk.groupId.Points.task;
 
+import java.util.Arrays;
+
 public class SomeArray {
     public static int[] createSomeArrayDownEven(int length) {
         int[] someArray = new int[length];
@@ -214,6 +216,18 @@ public class SomeArray {
             }
         }
         return value;
+    }
+
+    static boolean[] findEvenNumbers(int[] array) {
+        boolean[] bool = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                bool[i] = true;
+            } else {
+                bool[i] = false;
+            }
+        }
+        return bool;
     }
 
 }
